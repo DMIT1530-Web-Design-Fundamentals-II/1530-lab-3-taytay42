@@ -7,3 +7,27 @@
   --green: #8BC34A;
   --white: #FAFAFA;
 }
+
+.main-menu a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem; /* Adjust as needed */
+}
+
+.main-menu img {
+  width: 1em; /* Size relative to font size */
+  height: 1em; /* Size relative to font size */
+  margin-left: 0.5em; /* Space between text and icon */
+}
+
+nav {
+  display: none; /* Hide navigation by default */
+}
+
+.show-nav {
+  display: block; /* Show navigation when .show-nav is added */
+}
+
+a {
+  text-decoration: none;
+}
