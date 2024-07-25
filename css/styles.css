@@ -1,4 +1,14 @@
-/* NOTE: Make sure that when you complete your Lab, you leave a comment at the top of this file listing which new properties you used! */
+/* NOTE: I used the animation property to animate a colour change on the main-box */
+
+@keyframes colour {
+  from {
+    background-color: #EC407A;
+  }
+
+  to {
+    background-color: #FAFAFA;
+  }
+}
 
 :root {
   --dk-grey: #263238;
@@ -8,26 +18,150 @@
   --white: #FAFAFA;
 }
 
+.highlight {
+  color: #EC407A;
+}
+
+.first-link img {
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5em;
+}
+
+main {
+  background-image: url(../img/crowd-background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box {
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  animation-name: colour;
+  animation-duration: 4s;
+}
+
+h1 {
+  font-family: "Nunito", sans-serif;
+  color: #FAFAFA;
+  margin-left: 20rem;
+}
+
+h2 {
+  font-family: "Nunito", sans-serif;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+.register-button {
+  font-family: "Nunito", sans-serif;
+  width: 10rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to right, #EC407A, #FDD835);
+  padding: 0.3rem;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+header {
+  background-color: #263238;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .main-menu a {
   display: flex;
   align-items: center;
-  font-size: 1rem; /* Adjust as needed */
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .main-menu img {
-  width: 1em; /* Size relative to font size */
-  height: 1em; /* Size relative to font size */
-  margin-left: 0.5em; /* Space between text and icon */
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5rem;
 }
 
 nav {
-  display: none; /* Hide navigation by default */
+  display: none;
 }
 
 .show-nav {
-  display: block; /* Show navigation when .show-nav is added */
+  display: block;
 }
 
 a {
   text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  color: #FAFAFA;
+}
+
+.menu-icon {
+  width: 2em;
+  height: 2em;
+  margin-left: auto;
+  margin-right: 20rem;
+}
+
+.second-tier {
+  padding: 1rem;
+  position: absolute;
+  visibility: hidden;
+  background-color: #263238;
+  max-width: 20rem;
+}
+
+.second-tier li {
+  margin: 1.5rem;
+  margin-right: 6rem;
+}
+
+ul li:hover>ul,
+ul li:focus-within>ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+@media screen and (max-width: 950px) {
+
+  h1 {
+    margin-left: 1rem;
+  }
+
+  .menu-icon {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
 }
